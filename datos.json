@@ -1,0 +1,35 @@
+{
+    "propiedades": [
+      {
+        "nombre": "Final Fantasy",
+        "data": ["cloud-slash", "summon"]
+      },
+      {
+        "nombre": "Mario",
+        "data": ["jump-mario", "spin-mario", "Cabeza"]
+      },
+      {
+        "nombre": "fortnite",
+        "data": ["jump-23", "spin-mario", "Cabeza"]
+      }
+    ],
+    "subcategorias": [
+      {
+        "nombre": "Head",
+        "data": ["Cabeza", "Craneo", "Head"]
+      },
+      {
+        "nombre": "Talk",
+        "data": ["Caminar", "Caminata", "Talk"]
+      },
+      {
+        "nombre": "Arma",
+        "data": ["Vuelo", "Aire", "Fly", "Flying"]
+      },
+      {
+        "nombre": "Idle",
+        "data": ["Idle", "Quieto", "Reposo", "Jump"]
+      }
+    ]
+  }
+  
