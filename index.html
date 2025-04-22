@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galería</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="paginacion.css">
+</head>
+<body>
+    <div id="checkboxes-propiedad" class="centrado"></div>
+    <div id="checkboxes-subcategoria" class="centrado"></div>
+    <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Buscar..." name="filtroTexto" id="filtroTexto" required />
+        <label for="filtroTexto" class="form__label">Filtrar Animaciones</label>
+      </div>
+    <div id="contenedor-videos"></div>
+    <details id="popup-nombre-video">
+        <summary id="popup-trigger">Ver lista de Animaciones seleccionadas</summary>
+        <div id="popup-contenido">
+          <ul id="lista-videos"></ul>
+
+            <button id="boton-copiar-lista" class="btn-copiar">Copiar todos</button>
+            <button id="eliminar-todo" class="btn-eliminar noselect">
+              <span class="text">Delete all</span>
+              <span class="icon">
+                <svg  width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/>
+                </svg>
+              </span>
+            </button>
+
+
+        </div>
+      </details>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="script.js">
+  </script>
+
+</body>
+</html>
