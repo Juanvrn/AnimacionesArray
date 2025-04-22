@@ -1,0 +1,17 @@
+.categoria-videos {
+    position: relative;
+    padding-top: 60px; /* esto crea espacio arriba */
+    margin-bottom: 80px; /* opcional, separación entre categorías */
+  }
+
+
+  
+  .sticky-paginacion {
+    position: sticky;
+    top: 0; /* puedes cambiar a 10px o 20px si hay header */
+    background-color: white;
+    z-index: 10;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
