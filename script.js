@@ -1,4 +1,4 @@
-/*const arrayPropiedad = [
+const arrayPropiedad = [
     { nombre: "Dead Island 2", data: [
         "Base Context Head ChopPull ToD",
         "Base Context Head ChopPull ToD Med1HChL",
@@ -574,9 +574,9 @@
     { nombre: "Zombie", data: ["Zombie", "Zombi", "Muertos"] },
     { nombre: "Atropello", data: ["Accidente", "Carro", "Atropello"] },
     { nombre: "Land", data: ["Land", "Suelo", "Piso", "Tierra"] }
-  ];*/
+  ];
 
-  // PASO 1: reemplaza tu definición actual de arrays con esto
+ /*
 
 const arrayPropieda=[];
 const arraySubCategoria=[];
@@ -590,7 +590,7 @@ fetch("https://raw.githubusercontent.com/Juanvrn/AnimacionesArray/main/datos.jso
   // Si tenés funciones que necesitan los arrays, llamalas acá
   renderVideos();
 })
-.catch(err => console.error("Error cargando datos desde GitHub:", err));
+.catch(err => console.error("Error cargando datos desde GitHub:", err));*/
 
 
 
