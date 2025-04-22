@@ -780,7 +780,7 @@ videosPagina.forEach(nombre => {
   item.className = "video-item";
 
   const video = document.createElement("video");
-  video.src = `Videos/${nombre}.mp4`;
+  video.src = `${nombre}.mp4`;
   video.autoplay = true;
   video.loop = true;
   video.muted = true;
