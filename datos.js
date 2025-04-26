@@ -1042,7 +1042,7 @@ const arrayPropiedad = [
   const arraySubCategoria = [
     { nombre: "Head", data: ["Cabeza", "Craneo", "Head"] },
     { nombre: "Talk", data: ["Talk", "Chat", "Say", "Converse", "Dialogue", "Conversando", "Hablar"] },
-    { nombre: "Fly", data: ["Vuelo", "Aire", "Fly", "Flying","Air"] },
+    { nombre: "Fly", data: ["Vuelo", "Aire", "Fly", "Flying","Air","Air", "Jump", "Aerial", "Fly", "Float", "Aire", "Salto", "Aéreo", "Volar"] },
     { nombre: "Idle", data: ["Idle", "Quieto", "Reposo", "Rest", "Wait", "Still", "Standby", "Pause","Inactivo", "Reposo", "Quieto"] },
     { nombre: "Weapon", data: ["Weapon", "Arma", "Pistola", "Escopeta","Metralleta","Cuchillo","Rifle"] },
     { nombre: "Interact", data: ["Interact", "Objeto", "Arma", "Escopeta","Metralleta","Cuchillo","Pistola","Use", "Activate", "Grab", "Press", "Manipulate","Interactuar", "Usar", "Tocar", "Activar","Bate"] },
@@ -1061,7 +1061,6 @@ const arrayPropiedad = [
     { nombre: "Emotes", data: ["Expressions", "Gestures", "Reactions","Gestos", "Emociones", "Reacciones"] },
     { nombre: "Dance", data: ["Dance", "Move", "Groove", "Boogie", "Bailar", "Moverse", "Danza"] },
     { nombre: "Launch", data: ["Lanzar", "Impulsar", "Arrojar","Throw", "Propel", "Toss"] },
-    { nombre: "Air", data: ["Air", "Jump", "Aerial", "Fly", "Float", "Aire", "Salto", "Aéreo", "Volar"] },
     { nombre: "Loop", data: ["Bucle", "Ciclo", "Repetición", "Cycle", "Repeat", "Looping", "Loop"] },
     { nombre: "Zombie", data: ["Zombie", "Zombi", "Muertos"] },
     { nombre: "Atropello", data: ["Accidente", "Carro", "Atropello"] },
