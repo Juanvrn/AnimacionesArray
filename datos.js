@@ -1041,14 +1041,14 @@ const arrayPropiedad = [
   
   const arraySubCategoria = [
     { nombre: "Head", data: ["Cabeza", "Craneo", "Head"] },
-    { nombre: "Talk", data: ["Caminar", "Caminata", "Talk", "Chat", "Say", "Converse", "Dialogue", "Caminar", "Andar", "Pasear", "Stroll", "Pace", "Step"] },
+    { nombre: "Talk", data: ["Talk", "Chat", "Say", "Converse", "Dialogue", "Conversando", "Hablar"] },
     { nombre: "Fly", data: ["Vuelo", "Aire", "Fly", "Flying","Air"] },
     { nombre: "Idle", data: ["Idle", "Quieto", "Reposo", "Rest", "Wait", "Still", "Standby", "Pause","Inactivo", "Reposo", "Quieto"] },
     { nombre: "Weapon", data: ["Weapon", "Arma", "Pistola", "Escopeta","Metralleta","Cuchillo","Rifle"] },
     { nombre: "Interact", data: ["Interact", "Objeto", "Arma", "Escopeta","Metralleta","Cuchillo","Pistola","Use", "Activate", "Grab", "Press", "Manipulate","Interactuar", "Usar", "Tocar", "Activar","Bate"] },
     { nombre: "Stun", data: ["Aturdir", "Tambalear", "Desorientar","Dazed", "Knockback", "Stagger"] },
     { nombre: "Hit", data: ["Golpear","Patada","Hit", "Strike", "Impact", "Blow", "Smash", "Punch","Golpe", "Impacto", "Puñetazo", "Strike", "Punch", "Smash", "Impact"]},
-    { nombre: "Walk", data: ["Walk", "Stroll", "Pace", "Step", "March"] },
+    { nombre: "Walk", data: ["Walk", "Caminar", "Caminata", "Andar", "Pasear", "Stroll", "Pace", "Step"] },
     { nombre: "Run", data: ["Run", "Sprint", "Dash", "Race", "Hustle","Sprint", "Jog", "Dash", "Rush" , "Correr", "Trotar", "Apresurarse"] },
     { nombre: "Recovery", data: ["Recovery", "Heal", "Regain", "Restore", "GetUp", "StandUp", "Recuperación", "Sanar", "Levantarse","Heal", "Regain", "GetUp"] },
     { nombre: "Stun", data: ["Stun", "Daze", "Knockback", "Freeze", "Dizzy", "Paralyze"] },
