@@ -546,7 +546,7 @@ const arrayPropiedad = [
       "dnce_M_e"
     ] },
     {nombre: "Pubg Mobil", data:[
-
+    "1","2","3"
     ]},
     {nombre: "Final Fantasy", data:[
 
