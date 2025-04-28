@@ -1185,5 +1185,6 @@ const arrayPropiedad = [
     { nombre: "Loop", data: ["Bucle", "Ciclo", "Repetición", "Cycle", "Repeat", "Looping", "Loop"] },
     { nombre: "Zombie", data: ["Zombie", "Zombi", "Muertos"] },
     { nombre: "Atropello", data: ["Accidente", "Carro", "Atropello"] },
-    { nombre: "Land", data: ["Land", "Suelo", "Piso", "Tierra"] }
+    { nombre: "Land", data: ["Land", "Suelo", "Piso", "Tierra"] },
+    { nombre: "Listen", data: ["Listen", "Escuchar", "Oir", "Oido", "Tune in", "Hea", "Pay attention"] }
   ];
