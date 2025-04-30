@@ -1600,11 +1600,11 @@ const arrayPropiedad = [
     { nombre: "Climb", data: ["Climb", "Scale", "Ascend", "Mount", "CrawlUp", "Escalar", "Trepar", "Subir"] },
     { nombre: "GetShot", data: ["GetShot", "TakeHit", "Damaged", "HitReaction", "ImpactReceived", "Recibir Disparo", "Ser golpeado", "Herido", "Hit", "TakeDamage", "Injured", "Impact"] },
     { nombre: "Emotes", data: ["Expressions", "Gestures", "Reactions","Gestos", "Emociones", "Reacciones"] },
-    { nombre: "Dance", data: ["Dance", "Move", "Groove", "Boogie", "Bailar", "Moverse", "Danza"] },
+    { nombre: "Dance", data: ["Dance", "Move", "Groove", "Boogie", "Bailar", "Moverse", "Danza", "Dancing", "dnce"] },
     { nombre: "Launch", data: ["Lanzar", "Impulsar", "Arrojar","Throw", "Propel", "Toss"] },
     { nombre: "Loop", data: ["Bucle", "Ciclo", "Repetición", "Cycle", "Repeat", "Looping", "Loop"] },
     { nombre: "Zombie", data: ["Zombie", "Zombi", "Muertos"] },
-    { nombre: "Atropello", data: ["Accidente", "Carro", "Atropello"] },
+    { nombre: "Vehiculo", data: ["Accidente", "Carro", "Atropello", "Bus", "Driver", "Taxi"] },
     { nombre: "Land", data: ["Land", "Suelo", "Piso", "Tierra"] },
     { nombre: "Listen", data: ["Listen", "Escuchar", "Oir", "Oido", "Tune in", "Hea", "Pay attention"] }
   ];
