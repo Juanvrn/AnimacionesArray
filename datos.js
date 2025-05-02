@@ -829,7 +829,17 @@ const arrayPropiedad = [
       "WOMAN walkpro",
       "WOMAN walksexy",
       "WOMAN walkshop",
-      "XPRESSscratch"
+      "XPRESSscratch",
+      "cop COP getoutcar LHS",
+      "cop Cop move FWD",
+      "cop CopTraf Away",
+      "cop CopTraf Come",
+      "cop CopTraf Left",
+      "cop CopTraf Stop",
+      "cop crm drgbst 01",
+      "cop Door Kick",
+      "cop plc drgbst 01",
+      "cop plc drgbst 02"
     ] },
     {nombre: "Pubg Mobil", data:[
         "Special Emot Champion",
