@@ -2118,6 +2118,32 @@ const arrayPropiedad = [
         "Window Sit Male LM",
         "WritesOnSlate Loop LM"
     ]},
+    {nombre: "Fortnite", data:[
+      "A Bar Song",
+      "all red",
+      "APT.",
+      "bb belt",
+      "BIRDS OF A FEATHER",
+      "Blah Blah Blah",
+      "Bouncy",
+      "brokenhearted",
+      "Criminals",
+      "Cupid's Arrow",
+      "GEEK TIMË",
+      "Keep Me Satisfied",
+      "Let's Go Back",
+      "Liar",
+      "Lunar Party",
+      "Mantra",
+      "New Woman",
+      "Please Please Please",
+      "Ratatata",
+      "Roll Call",
+      "Royals",
+      "Swag Surfin",
+      "Taste",
+      "Timeless"
+    ]},
   ];
   
   const arraySubCategoria = [
