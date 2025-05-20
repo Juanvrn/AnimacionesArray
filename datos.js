@@ -527,7 +527,17 @@ const arrayPropiedad = [
         "ZombiePrepararAtaque",
         "ZombiePunete",
         "ZombieRascarse",
-        "ZombieVoltear"
+        "ZombieVoltear",
+        "Firing Rifle_remap",
+        "Gunplay (1)_remap",
+        "Gunplay (2)_remap",
+        "Gunplay (3)_remap",
+        "Gunplay (4)_remap",
+        "Gunplay (5)_remap",
+        "Gunplay (6)_remap",
+        "Gunplay_remap",
+        "Prone Right Turn_remap",
+        "Shooting_remap"
     ] },
     { nombre: "San Andreas", data: [
       "111 Run Gun",
