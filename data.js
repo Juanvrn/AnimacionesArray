@@ -350,7 +350,6 @@
           { id: "^C?iIYAK", valor: "Flip Kick (1)" },
           { id: "4[u=yso-", valor: "Flying Bicycle Kick" },
           { id: "A1I<<s{b", valor: "Flying Kick" },
-          { id: "lFr{nW2M", valor: "Goalkeeper Drop Kick" },
           { id: "rGqon>C]", valor: "Great Sword Kick" },
           { id: ")$X4CX)C", valor: "Hurricane Kick" },
           { id: "K5N{YKWn", valor: "Inside Crescent Kick" },
