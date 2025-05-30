@@ -43,6 +43,19 @@
         {nombre:"wfypro", tipo:"San Andreas", categoria:"Trabajador", sexo:"Femenino", rig:"ARPFortnite"},
         {nombre:"wmyst", tipo:"San Andreas", categoria:"Peaton", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"woozie", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+
+        {nombre:"MC Araujo Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Balla Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Creeeper Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Esqueleto Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Iniesta Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Lamine Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Mbappe Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Neymar Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Pele Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Player Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Ronaldhino Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Xavi Barcelona", tipo:"Minecraft", categoria:"Deportista", sexo:"Masculino", rig:"MCprep"},
     ];
         /*for (let i = 1; i <= 50; i++) {
             let tipo, sexoDeterminado, categoriaEjemplo;
