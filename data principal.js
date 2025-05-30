@@ -7,7 +7,7 @@
                 { label: "Minecraft", type: "iframeLink", link: "minecraft_placeholder.html" }
             ]
         },
-        // CAMBIO AQUÍ para que "Modelos" y "Audios" también usen el iframe:
+        // CAMBIO AQUÍ para que "Modelos" y "Audios" también usen el iframes:
         { label: "Modelos", type: "iframeLink", link: "modelos.html" },
         { label: "Audios", type: "iframeLink", link: "audios.html" }
     ];
