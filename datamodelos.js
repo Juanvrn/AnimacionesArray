@@ -40,7 +40,7 @@
         {nombre:"vla1", tipo:"San Andreas", categoria:"Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"vla2", tipo:"San Andreas", categoria:"Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"vla3", tipo:"San Andreas", categoria:"Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
-        {nombre:"wfypro", tipo:"San Andreas", categoria:"Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"wfypro", tipo:"San Andreas", categoria:"Trabajador", sexo:"Femenino", rig:"ARPFortnite"},
         {nombre:"wmyst", tipo:"San Andreas", categoria:"Peaton", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"woozie", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
     ];
