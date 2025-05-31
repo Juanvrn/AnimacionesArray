@@ -56,6 +56,18 @@
         {nombre:"MC Player Barcelona", tipo:"Minecraft", categoria:"MC Futbolista", sexo:"Masculino", rig:"MCprep"},
         {nombre:"MC Ronaldhino Barcelona", tipo:"Minecraft", categoria:"MC Futbolista, MC Barcelona", sexo:"Masculino", rig:"MCprep"},
         {nombre:"MC Xavi Barcelona", tipo:"Minecraft", categoria:"MC Futbolista, MC Barcelona", sexo:"Masculino", rig:"MCprep"},
+
+        {nombre:"MC Bellingham Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Cr7 Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Endrick Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Kaka Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Kroos Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Mbappe Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Messi Barcelona", tipo:"Minecraft", categoria:"MC Futbolista, MC Barcelona", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Modric Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Rodrigo Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Rudiger Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, MC Real Madrid", sexo:"Masculino", rig:"MCprep"},
+        {nombre:"MC Vinicius Real Madrid", tipo:"Minecraft", categoria:"MC Futbolista, Real Madrid", sexo:"Masculino", rig:"MCprep"},
     ];
         /*for (let i = 1; i <= 50; i++) {
             let tipo, sexoDeterminado, categoriaEjemplo;
