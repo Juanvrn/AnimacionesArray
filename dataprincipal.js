@@ -4,7 +4,8 @@ const menuData = [
         type: "dropdown",  
         children: [   
             { label: "ARPFortnite", type: "iframeLink", link: "arpfortnite.html" },    
-            { label: "Minecraft", type: "iframeLink", link: "animminecraft.html" } 
+            { label: "Minecraft", type: "iframeLink", link: "animminecraft.html" },
+            { label: "MinecraftMobs", type: "iframeLink", link: "animmobs.html" } 
         ]
     }, 
     // CAMBIO AQUÍ para que "Modelos" y "Audios" también usen el iframe:   
