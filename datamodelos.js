@@ -1,5 +1,5 @@
 // --- Datos (sin cambios) ---
-    const modelosTipo = ["San Andreas", "Minecraft", "Otros"];
+    const modelosTipo = ["San Andreas", "Minecraft", "MinecraftMobs", "Otros"];
         //const arraySex = ["Masculino", "Femenino", "N/A"];
     const modelos = [
         {nombre:"CJ", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
@@ -43,6 +43,10 @@
         {nombre:"wfypro", tipo:"San Andreas", categoria:"Trabajador, Zombie", sexo:"Femenino", rig:"ARPFortnite"},
         {nombre:"wmyst", tipo:"San Andreas", categoria:"Peaton", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"woozie", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+
+        {nombre:"MC Skeleton", tipo:"MinecraftMobs", categoria:"", sexo:"Masculino", rig:"MCMob"},
+        {nombre:"MC WitherSkeleton", tipo:"MinecraftMobs", categoria:"", sexo:"Masculino", rig:"MCMob"},
+        {nombre:"MC Zombie", tipo:"MinecraftMobs", categoria:"", sexo:"Masculino", rig:"MCMob"},
 
         {nombre:"MC Araujo Barcelona", tipo:"Minecraft", categoria:"MC Futbolista, MC Barcelona", sexo:"Masculino", rig:"MCprep"},
         {nombre:"MC Balla Barcelona", tipo:"Minecraft", categoria:"MC Futbolista, MC San Andreas", sexo:"Masculino", rig:"MCprep"},
