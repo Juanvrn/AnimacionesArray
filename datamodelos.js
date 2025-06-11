@@ -139,7 +139,7 @@
         {nombre:"Llanura Cartografo", tipo:"Minecraft Aldeanos", categoria:"Aldeanos, Cartografo, Llanura", sexo:"Masculino", rig:"Aldeano"},
         {nombre:"Llanura Clerigo", tipo:"Minecraft Aldeanos", categoria:"Aldeanos, Clerigo, Llanura", sexo:"Masculino", rig:"Aldeano"},
         {nombre:"Llanura Desempleado", tipo:"Minecraft Aldeanos", categoria:"Aldeanos, Desempleado, Llanura", sexo:"Masculino", rig:"Aldeano"},
-        {nombre:"Llanura Flechero", tipo:"Minecraft Aldeanos", categoria:"Aldeanos, AlbañFlecheroil, Llanura", sexo:"Masculino", rig:"Aldeano"},
+        {nombre:"Llanura Flechero", tipo:"Minecraft Aldeanos", categoria:"Aldeanos, Flechero, Llanura", sexo:"Masculino", rig:"Aldeano"},
         {nombre:"Llanura Granjero", tipo:"Minecraft Aldeanos", categoria:"Aldeanos, Granjero, Llanura", sexo:"Masculino", rig:"Aldeano"},
         {nombre:"Llanura Herrero de armaduras", tipo:"Minecraft Aldeanos", categoria:"Aldeanos, Herrero de armaduras, Llanura", sexo:"Masculino", rig:"Aldeano"},
         {nombre:"Llanura Herrero de armas", tipo:"Minecraft Aldeanos", categoria:"Aldeanos, Herrero de armas, Llanura", sexo:"Masculino", rig:"Aldeano"},
