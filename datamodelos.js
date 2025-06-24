@@ -43,6 +43,18 @@
         {nombre:"wfypro", tipo:"San Andreas", categoria:"Trabajador, Zombie", sexo:"Femenino", rig:"ARPFortnite"},
         {nombre:"wmyst", tipo:"San Andreas", categoria:"Peaton", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"woozie", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"dsher", tipo:"San Andreas", categoria:"Policia, Trabajador, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"army", tipo:"San Andreas", categoria:"Policia, Trabajador, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"fbi", tipo:"San Andreas", categoria:"Policia, Trabajador, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"swat", tipo:"San Andreas", categoria:"Policia, Trabajador, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"lapdm1", tipo:"San Andreas", categoria:"Policia, Trabajador, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"csher", tipo:"San Andreas", categoria:"Policia, Trabajador, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"lvpd1", tipo:"San Andreas", categoria:"Policia, Trabajador, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"sfpd1", tipo:"San Andreas", categoria:"Policia, Trabajador, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"lvpdm1", tipo:"San Andreas", categoria:"Policia, Trabajador", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"sfpdm1", tipo:"San Andreas", categoria:"Policia, Trabajador", sexo:"Masculino", rig:"ARPFortnite"},
+        
+        
 
         {nombre:"MC Skeleton", tipo:"MinecraftMobs", categoria:"", sexo:"Masculino", rig:"MCMob"},
         {nombre:"MC WitherSkeleton", tipo:"MinecraftMobs", categoria:"", sexo:"Masculino", rig:"MCMob"},
