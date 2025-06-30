@@ -78,6 +78,15 @@
         {nombre:"Policia 5", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Policia 6", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Policia 7", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Policia 8", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Policia 9", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Policia 10", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Policia 11", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+
+        {nombre:"Director del juego", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Soldado circulo", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Soldado cuadrado", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Soldado triangulo", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
         
         
 
