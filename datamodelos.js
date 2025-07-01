@@ -42,6 +42,7 @@
         {nombre:"vla3", tipo:"San Andreas", categoria:"Pandilla, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"wfypro", tipo:"San Andreas", categoria:"Oficio, Zombie", sexo:"Femenino", rig:"ARPFortnite"},
         {nombre:"wmyst", tipo:"San Andreas", categoria:"Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"wmyst v2", tipo:"San Andreas", categoria:"Peaton", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"woozie", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"dsher", tipo:"San Andreas", categoria:"Policia, Oficio, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"army", tipo:"San Andreas", categoria:"Policia, Oficio, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
@@ -70,6 +71,8 @@
         {nombre:"Zombie 9", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Zombie 10", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Zombie 11", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 12", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 13", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
 
         {nombre:"Policia 1", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Policia 2", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
@@ -82,11 +85,14 @@
         {nombre:"Policia 9", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Policia 10", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Policia 11", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Policia 12", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
 
         {nombre:"Director del juego", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Soldado circulo", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Soldado cuadrado", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Soldado triangulo", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Papanoel", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Hitler", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
         
         
 
