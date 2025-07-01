@@ -86,6 +86,7 @@
         {nombre:"Policia 10", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Policia 11", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Policia 12", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Policia 13", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Femenino", rig:"ARPFortnite"},
 
         {nombre:"Director del juego", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Soldado circulo", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
