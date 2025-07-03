@@ -3,7 +3,9 @@
         //const arraySex = ["Masculino", "Femenino", "N/A"];
     const modelos = [
         {nombre:"CJ", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"CJ HD", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Sweet", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Sweet HD", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Ryder", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Smoke", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Ballas1", tipo:"San Andreas", categoria:"Pandilla, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
