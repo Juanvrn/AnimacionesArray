@@ -13,6 +13,7 @@ const menuData = [
     { label: "Prefab", type: "dropdown", children: [
         { label: "Objetos", type: "iframeLink", link: "objetos.html" },
         { label: "Vehiculos", type: "iframeLink", link: "vehiculos.html" },
+        { label: "Escenas", type:"iframeLink", link:"escenas.html"}
     ] 
     },
     { label: "Audios", type: "iframeLink", link: "audios.html" }
