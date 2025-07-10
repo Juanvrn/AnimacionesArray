@@ -70,7 +70,7 @@ const menuData = [
         name: "Mods",
         type : "group",
         subcategories :[
-            {id:"YouAreHere",name: "You Are Here", type:"category",images:4},
+            {id:"YouAreHere",name: "You are here", type:"category",images:4},
             {id:"Bob-Sponja",name: "Bob Sponja", type:"group", subcategories:[
                 {id:"Fondo de bikini", name:"Fondo de Bikini", type:"category", images:4},
                 {id:"Crustaseo", name:"Crustaseo", type:"category", images:4},
