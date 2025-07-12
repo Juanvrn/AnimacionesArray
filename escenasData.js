@@ -61,6 +61,18 @@ const menuData = [
                     {id:"Tienda Donuts",name:"Tienda Donuts",type:"category",images:4},
                     {id:"Laboratorio",name:"Laboratorio",type:"category",images:4},
                     {id:"Bar",name:"Bar",type:"category",images:4},
+                    {id:"Carcel",name:"Carcel",type:"category",images:3},
+                    {id:"Casa Establo",name:"Casa Establo",type:"category",images:3},
+                    {id:"Casa int4",name:"Casa int4",type:"category",images:2},
+                    {id:"Comisaria LV",name:"Comisaria LV",type:"category",images:5},
+                    {id:"Comisaria SF",name:"Comisaria SF",type:"category",images:3},
+                    {id:"Establo",name:"Establo",type:"category",images:3},
+                    {id:"Habitacion Novia CJ",name:"Habitacion Novia CJ",type:"category",images:3},
+                    {id:"Habitacion Sucia",name:"Habitacion Sucia",type:"category",images:2},
+                    {id:"Peluqueria",name:"Peluqueria",type:"category",images:2},
+                    {id:"Restaurant",name:"Restaurant",type:"category",images:2},
+                    {id:"Tienda de armas",name:"Tienda de armas",type:"category",images:2},
+                    {id:"Casa CJ",name:"Casa CJ",type:"category",images:4},
                 ]
             },
         ]
