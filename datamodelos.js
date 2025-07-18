@@ -4,11 +4,14 @@
     const modelos = [
         {nombre:"CJ", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"CJ HD", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"CJ medico", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"CJ policia", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Sweet", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Sweet HD", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Ryder", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Smoke", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Ballas1", tipo:"San Andreas", categoria:"Pandilla, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Ballas 1 HD", tipo:"San Andreas", categoria:"Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Ballas2", tipo:"San Andreas", categoria:"Pandilla, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Ballas3", tipo:"San Andreas", categoria:"Pandilla, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"bfori", tipo:"San Andreas", categoria:"Peaton, Zombie", sexo:"Femenino", rig:"ARPFortnite"},
@@ -28,6 +31,21 @@
         {nombre:"lsv2", tipo:"San Andreas", categoria:"Pandilla, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"lsv3", tipo:"San Andreas", categoria:"Pandilla, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"maccer", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"torino", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"sindaco", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"bb", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"bbthin", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"catalina", tipo:"San Andreas", categoria:"Especial", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"dwayne", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"emmet", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"janitor", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"jethro", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"jizzy", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"paul", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"triada2", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
+
+
+
         {nombre:"male01", tipo:"San Andreas", categoria:"Peaton, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"ogloc", tipo:"San Andreas", categoria:"Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"sfr1", tipo:"San Andreas", categoria:"Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
@@ -60,6 +78,8 @@
         {nombre:"pulaski", tipo:"San Andreas", categoria:"Policia, Oficio, Especial", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"tenpenny", tipo:"San Andreas", categoria:"Policia, Oficio, Especial", sexo:"Masculino", rig:"ARPFortnite"},
 
+        {nombre:"Gilipollas casual", tipo:"San Andreas", categoria:"Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+
         {nombre:"Cientifico 1", tipo:"San Andreas", categoria:"Oficio, Especial, Mod", sexo:"Masculino", rig:"ARPFortnite"},
 
         {nombre:"Zombie 1", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
@@ -75,6 +95,7 @@
         {nombre:"Zombie 11", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Zombie 12", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Zombie 13", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 14", tipo:"San Andreas", categoria:"Mod, Zombie", sexo:"Masculino", rig:"ARPFortnite"},
 
         {nombre:"Policia 1", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Policia 2", tipo:"San Andreas", categoria:"Mod, Policia, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
@@ -96,6 +117,12 @@
         {nombre:"Soldado triangulo", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Papanoel", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"Hitler", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Pandillero 1", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Pandillero 2", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Skeleto", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Padre Vittorio", tipo:"San Andreas", categoria:"Mod", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Mujer militar", tipo:"San Andreas", categoria:"Mod", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"Aileen Galvin", tipo:"San Andreas", categoria:"Mod", sexo:"Femenino", rig:"ARPFortnite"},
         
         
 
