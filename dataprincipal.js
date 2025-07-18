@@ -8,7 +8,10 @@ const menuData = [
             { label: "MinecraftMobs", type: "iframeLink", link: "animmobs.html" },
         ]
     },
-    { label: "Modelos", type: "iframeLink", link: "modelos.html" },
+    { label: "Modelos", type: "dropdown", children:[
+        {label:"RigFull", type:"iframeLink", link:"modelos.html"},
+        {label:"Relleno", type:"iframeLink", link:"modelosRelleno.html"},
+    ]},
     // CAMBIO AQUÍ para que "Modelos" y "Audios" también usen el iframe:   
     { label: "Prefab", type: "dropdown", children: [
         { label: "Objetos", type: "iframeLink", link: "objetos.html" },
