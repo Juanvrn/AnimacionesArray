@@ -69,6 +69,50 @@
         {nombre:"DNMOLC1 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"DNMOLC2 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
 
+        {nombre:"DNMYLC rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"dsher rel", tipo:"San Andreas", categoria:"Zombie, Policia", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"DWFOLC rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"DWFYLC1 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"DWFYLC2 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"DWMOLC1 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"DWMOLC2 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"DWMYLC1 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"DWMYLC2 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"FAM1 rel", tipo:"San Andreas", categoria:"Zombie, Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
+
+        {nombre:"FAM2 rel", tipo:"San Andreas", categoria:"Zombie, Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"FAM3 rel", tipo:"San Andreas", categoria:"Zombie, Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"fbi rel", tipo:"San Andreas", categoria:"Zombie, Policia", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"GANGRL3 rel", tipo:"San Andreas", categoria:"Especial", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"HECK1 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HECK2 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HFORI rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"HFOST rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"HFYBE rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+
+        {nombre:"HFYPRO rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"HFYRI rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"HFYST rel", tipo:"San Andreas", categoria:"Peaton", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"HMOGAR rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HMORI rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HMOST rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HMYBE rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HMYCM rel", tipo:"San Andreas", categoria:"Zombie, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HMYCR rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HMYDRUG rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+
+        {nombre:"HMYRI rel", tipo:"San Andreas", categoria:"Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"HMYST rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"laemt1 rel", tipo:"San Andreas", categoria:"Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"lafd1 rel", tipo:"San Andreas", categoria:"Zombie, Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"lapd1 rel", tipo:"San Andreas", categoria:"Zombie, Policia", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"lapdm1 rel", tipo:"San Andreas", categoria:"Zombie, Policia", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"LSV1 rel", tipo:"San Andreas", categoria:"Zombie, Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"LSV2 rel", tipo:"San Andreas", categoria:"Zombie, Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"LSV3 rel", tipo:"San Andreas", categoria:"Zombie, Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"lvemt1 rel", tipo:"San Andreas", categoria:"Oficio", sexo:"Masculino", rig:"ARPFortnite"},
+
+
 
 
         
