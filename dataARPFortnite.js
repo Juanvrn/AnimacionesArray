@@ -349,6 +349,37 @@ let arrayPropiedad = [
                     { id: "gtk_TL5z", valor: "Base Hit Stun Med" },
                 ]
             },
+            {
+                subpropiedad: "Crawler (Arrastrarse)", carpetas: [
+                    { id: "srx*p_Tz", valor: "LH TurnOnSpot Slow L135 Arrastrarse" },
+                    { id: "LBMoY9c_", valor: "LH TurnOnSpot Slow L180 Arrastrarse" },
+                    { id: "_W;EHP3t", valor: "LH TurnOnSpot Slow L45A Arrastrarse" },
+                    { id: "g_GZDb,r", valor: "LH TurnOnSpot Slow L90A Arrastrarse" },
+                    { id: ",l_E*7AO", valor: "LH TurnOnSpot Slow R135 Arrastrarse" },
+                    { id: "9hUZ/Aus", valor: "LH TurnOnSpot Slow R180 Arrastrarse" },
+                    { id: "-TT*.KkH", valor: "LH TurnOnSpot Slow R45A Arrastrarse" },
+                    { id: "LlTzgJ7w", valor: "LH TurnOnSpot Slow R90A Arrastrarse" },
+                    { id: "yARqr+wD", valor: "RH TurnOnSpot Slow L135 Arrastrarse" },
+                    { id: "q_6UuZ1N", valor: "RH TurnOnSpot Slow L180 Arrastrarse" },
+                    { id: "htlKm9Nf", valor: "RH TurnOnSpot Slow L45A Arrastrarse" },
+                    { id: "5eq7pe*+", valor: "RH TurnOnSpot Slow L90A Arrastrarse" },
+                    { id: "3yg0Q+-n", valor: "RH TurnOnSpot Slow R135 Arrastrarse" },
+                    { id: "U9Z8GG;K", valor: "RH TurnOnSpot Slow R180 Arrastrarse" },
+                    { id: "BFFReCdE", valor: "RH TurnOnSpot Slow R45A Arrastrarse" },
+                    { id: ",GdTii;x", valor: "RH TurnOnSpot Slow R90A Arrastrarse" },
+                    { id: "h2YiQ*n/", valor: "Strafe Fast B 01Army01 Arrastrarse" },
+                    { id: "L6Psy-MS", valor: "Strafe Fast L 01Army01 Arrastrarse" },
+                    { id: "AuGsCFKm", valor: "Strafe Fast R 01Army01 Arrastrarse" },
+                    { id: ":oB5/F+3", valor: "Strafe Med L 01Army01 Arrastrarse" },
+                    { id: "cmUqFEhs", valor: "Strafe Med R 01Army01 Arrastrarse" },
+                    { id: ".3u3B7t0", valor: "Strafe Slow B 01Army01 Arrastrarse" },
+                    { id: "onSZ/vVX", valor: "Strafe Slow L 01Army01 Arrastrarse" },
+                    { id: "9-60:nU1", valor: "Strafe Slow R 01Army01 Arrastrarse" },
+                    { id: "IUvSGSVs", valor: "Walk Fast F 01Army01 Arrastrarse" },
+                    { id: "*Ca6fHY,", valor: "Walk Med F 01Army01 Arrastrarse" },
+                    { id: "OGe.8gbb", valor: "Walk Slow F 01Army01 Arrastrarse" },
+                ]
+            }
         ]
     },
     {
