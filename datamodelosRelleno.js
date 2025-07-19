@@ -84,6 +84,7 @@
         {nombre:"FAM3 rel", tipo:"San Andreas", categoria:"Zombie, Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"fbi rel", tipo:"San Andreas", categoria:"Zombie, Policia", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"GANGRL3 rel", tipo:"San Andreas", categoria:"Especial", sexo:"Femenino", rig:"ARPFortnite"},
+        {nombre:"GUNGRL3 rel", tipo:"San Andreas", categoria:"Peaton", sexo:"Femenino", rig:"ARPFortnite"},
         {nombre:"HECK1 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"HECK2 rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"HFORI rel", tipo:"San Andreas", categoria:"Zombie, Peaton", sexo:"Femenino", rig:"ARPFortnite"},
