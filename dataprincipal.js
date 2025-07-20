@@ -19,5 +19,7 @@ const menuData = [
         { label: "Escenas", type:"iframeLink", link:"escenas.html"}
     ] 
     },
-    { label: "Audios", type: "iframeLink", link: "audios.html" }
+    { label: "Sonidos", type: "dropdown", children:[
+        {label:"GTASA", type:"iframeLink", link:"sonidosGTA.html"}
+    ] }
 ];
