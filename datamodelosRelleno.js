@@ -113,6 +113,18 @@
         {nombre:"LSV3 rel", tipo:"San Andreas", categoria:"Zombie, Pandilla", sexo:"Masculino", rig:"ARPFortnite"},
         {nombre:"lvemt1 rel", tipo:"San Andreas", categoria:"Oficio", sexo:"Masculino", rig:"ARPFortnite"},
 
+        {nombre:"Zombie 1 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 2 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 3 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 4 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 5 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 6 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 7 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 8 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 9 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 10 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+        {nombre:"Zombie 11 rel", tipo:"San Andreas", categoria:"Zombie", sexo:"Masculino", rig:"ARPFortnite"},
+
 
 
 
