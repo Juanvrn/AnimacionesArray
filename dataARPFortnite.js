@@ -5875,7 +5875,7 @@ let arrayPropiedad = [
 ];
 
 let arrayBusqueda = [
-    { nombre: "Head", data: ["Cabeza", "Craneo", "Head"] },
+    /*{ nombre: "Head", data: ["Cabeza", "Craneo", "Head"] },
     { nombre: "Talk", data: ["Talk", "Chat", "Say", "Converse", "Dialogue", "Conversando", "Hablar", "Talking"] },
     { nombre: "Fly", data: ["Vuelo", "Aire", "Fly", "Flying", "Air", "Fly", "Float", "Salto", "Aéreo", "Volar"] },
     { nombre: "Idle", data: ["Idle", "Quieto", "Reposo", "Standby", "Inactivo", "Reposo"] },
@@ -5899,5 +5899,5 @@ let arrayBusqueda = [
     { nombre: "Zombie", data: ["Zombie", "Zombi", "Muertos"] },
     { nombre: "Vehiculo", data: ["Accidente", "Carro", "Atropello", "Bus", "Driver", "Taxi"] },
     { nombre: "Land", data: ["Land", "Suelo", "Piso", "Tierra"] },
-    { nombre: "Listen", data: ["Listen", "Escuchar", "Oir", "Oido"] }
+    { nombre: "Listen", data: ["Listen", "Escuchar", "Oir", "Oido"] }*/
 ];
