@@ -20,6 +20,8 @@ const menuData = [
     ] 
     },
     { label: "Sonidos", type: "dropdown", children:[
-        {label:"GTASA", type:"iframeLink", link:"sonidosGTA.html"}
+        {label:"GTASA", type:"iframeLink", link:"audiogta.html"},
+        {label:"GTASA Modelos", type:"iframeLink", link:"audiomodelo.html"},
+        {label:"GTASA Conversacion", type:"iframeLink", link:"audioConversacion.html"},
     ] }
 ];
