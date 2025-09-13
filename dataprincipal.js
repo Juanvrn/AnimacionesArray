@@ -13,6 +13,7 @@ const menuData = [
         label: "Modelos", type: "dropdown", children: [
             { label: "RigFull", type: "iframeLink", link: "modelos.html" },
             { label: "Relleno", type: "iframeLink", link: "modelosRelleno.html" },
+            { label: "Relleno GTASA", type: "iframeLink", link: "relleno gtasa.html" },
         ]
     },
     // CAMBIO AQUÍ para que "Modelos" y "Audios" también usen el iframe:   
