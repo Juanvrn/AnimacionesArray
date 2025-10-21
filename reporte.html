@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Brainrots (Offline)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+        }
+        h1 { font-size: 2em; }
+        h2 { font-size: 1.5em; margin-top: 30px; }
+        h3 { font-size: 1.2em; color: #34495e; border-bottom: none; margin-top: 20px; }
+
+        #user-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+        #user-buttons button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+        #user-buttons button:hover {
+            background-color: #2980b9;
+        }
+        #user-buttons button.active {
+            background-color: #e74c3c;
+        }
+        
+        #user-list-container ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        #user-list-container li {
+            margin-bottom: 8px;
+            background-color: #fdfdfd;
+            padding: 5px 10px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+        }
+        .category {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-left: 8px;
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #dfe6e9;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #ecf0f1;
+            color: #34495e;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .no-results {
+            color: #95a5a6;
+            font-style: italic;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Reporte de Brainrots (Offline)</h1>
+        
+        <h2>Selecciona un usuario</h2>
+        <div id="user-buttons">
+            </div>
+
+        <div id="user-list-container">
+            </div>
+        
+        <div id="duplicates-container">
+            <h2>Brainrots Duplicados (entre estos 5 usuarios)</h2>
+            <div id="duplicates-content">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        // --- BASE DE DATOS (Hardcodeada en Arrays) ---
+
+        // 1. Usuarios (Solo los 5 solicitados)
+        const db_usuarios = [
+            { id: 21, dueño: 'juanvrn30' },
+            { id: 22, dueño: 'juanvrn31' },
+            { id: 23, dueño: 'juanvrn32' },
+            { id: 24, dueño: 'juanvrn33' },
+            { id: 25, dueño: 'juanvrn34' }
+        ];
+
+        // 2. Inventario de los 5 usuarios (Solo Estado = 'Disponible')
+        const db_brainrots_usuario = [
+            // juanvrn30 (ID: 21)
+            { userId: 21, brId: 12 }, { userId: 21, brId: 7 }, { userId: 21, brId: 90 },
+            { userId: 21, brId: 52 }, { userId: 21, brId: 4 }, { userId: 21, brId: 91 },
+            { userId: 21, brId: 49 }, { userId: 21, brId: 11 }, { userId: 21, brId: 13 },
+            { userId: 21, brId: 31 }, { userId: 21, brId: 92 }, { userId: 21, brId: 48 },
+            { userId: 21, brId: 43 }, { userId: 21, brId: 37 }, { userId: 21, brId: 93 },
+            { userId: 21, brId: 94 }, { userId: 21, brId: 65 }, { userId: 21, brId: 95 },
+            { userId: 21, brId: 75 }, { userId: 21, brId: 84 }, { userId: 21, brId: 39 },
+            // juanvrn31 (ID: 22)
+            { userId: 22, brId: 63 }, { userId: 22, brId: 89 }, { userId: 22, brId: 86 },
+            { userId: 22, brId: 87 }, { userId: 22, brId: 40 }, { userId: 22, brId: 88 },
+            { userId: 22, brId: 58 }, { userId: 22, brId: 14 }, { userId: 22, brId: 46 },
+            { userId: 22, brId: 72 }, { userId: 22, brId: 53 }, { userId: 22, brId: 81 },
+            { userId: 22, brId: 41 }, { userId: 22, brId: 82 }, { userId: 22, brId: 29 },
+            { userId: 22, brId: 84 }, { userId: 22, brId: 83 }, { userId: 22, brId: 62 },
+            { userId: 22, brId: 85 }, { userId: 22, brId: 5 }, { userId: 22, brId: 1 },
+            // juanvrn32 (ID: 23)
+            { userId: 23, brId: 15 }, { userId: 23, brId: 96 }, { userId: 23, brId: 4 },
+            { userId: 23, brId: 54 }, { userId: 23, brId: 97 }, { userId: 23, brId: 98 },
+            { userId: 23, brId: 68 }, { userId: 23, brId: 99 }, { userId: 23, brId: 25 },
+            { userId: 23, brId: 100 }, { userId: 23, brId: 101 }, { userId: 23, brId: 66 },
+            { userId: 23, brId: 56 }, { userId: 23, brId: 69 }, { userId: 23, brId: 2 },
+            { userId: 23, brId: 102 }, { userId: 23, brId: 55 }, { userId: 23, brId: 36 },
+            { userId: 23, brId: 103 }, { userId: 23, brId: 64 }, { userId: 23, brId: 104 },
+            // juanvrn33 (ID: 24)
+            { userId: 24, brId: 105 }, { userId: 24, brId: 106 }, { userId: 24, brId: 107 },
+            { userId: 24, brId: 8 }, { userId: 24, brId: 108 }, { userId: 24, brId: 109 },
+            { userId: 24, brId: 110 }, { userId: 24, brId: 111 }, { userId: 24, brId: 112 },
+            { userId: 24, brId: 39 }, { userId: 24, brId: 1 }, { userId: 24, brId: 64 },
+            { userId: 24, brId: 118 }, { userId: 24, brId: 119 }, { userId: 24, brId: 120 },
+            { userId: 24, brId: 121 }, { userId: 24, brId: 113 }, { userId: 24, brId: 114 },
+            { userId: 24, brId: 115 }, { userId: 24, brId: 116 }, { userId: 24, brId: 117 },
+            // juanvrn34 (ID: 25)
+            { userId: 25, brId: 24 }, { userId: 25, brId: 17 }, { userId: 25, brId: 20 },
+            { userId: 25, brId: 59 }, { userId: 25, brId: 45 }, { userId: 25, brId: 6 },
+            { userId: 25, brId: 73 }, { userId: 25, brId: 78 }, { userId: 25, brId: 122 },
+            { userId: 25, brId: 123 }, { userId: 25, brId: 124 }, { userId: 25, brId: 125 },
+            { userId: 25, brId: 128 }, { userId: 25, brId: 127 }, { userId: 25, brId: 126 },
+            { userId: 25, brId: 32 }, { userId: 25, brId: 9 }, { userId: 25, brId: 51 },
+            { userId: 25, brId: 30 }, { userId: 25, brId: 129 }, { userId: 25, brId: 74 }
+        ];
+
+        // 3. Lista Maestra de Brainrots (todos)
+        const db_brainrots = [
+            { id: 1, nombre: 'Tralalero Tralala', Categoria: 'Brainrot God' },
+            { id: 2, nombre: 'Los Bombinitos ', Categoria: 'Brainrot God' },
+            { id: 3, nombre: 'Brr es Teh Patipum', Categoria: 'Brainrot God' },
+            { id: 4, nombre: 'Extinct Ballerina', Categoria: 'Brainrot God' },
+            { id: 5, nombre: 'Trenostruzzo Turbo 3000', Categoria: 'Brainrot God' },
+            { id: 6, nombre: 'Odin Din Din Dun', Categoria: 'Brainrot God' },
+            { id: 7, nombre: 'Pakrahmatmamat', Categoria: 'Brainrot God' },
+            { id: 8, nombre: 'Ta Ta Ta Ta Sahur', Categoria: 'Rare' },
+            { id: 9, nombre: 'Ballerina Cappuccina', Categoria: 'Legendary' },
+            { id: 10, nombre: 'Extinct Tralalero', Categoria: 'Secret' },
+            { id: 11, nombre: 'Alessio', Categoria: 'Brainrot God' },
+            { id: 12, nombre: 'Girafa Celestre', Categoria: 'Brainrot God' },
+            { id: 13, nombre: 'Bombardiro Crocodilo', Categoria: 'Mythic' },
+            { id: 14, nombre: 'Tukanno Bananno', Categoria: 'Brainrot God' },
+            { id: 15, nombre: 'Sammyni Spyderini', Categoria: 'Secret' },
+            { id: 16, nombre: 'Gattatino Nyanino', Categoria: 'Brainrot God' },
+            { id: 17, nombre: 'Matteo', Categoria: 'Brainrot God' },
+            { id: 18, nombre: 'Unclito Samito', Categoria: 'Brainrot God' },
+            { id: 19, nombre: 'Orcalero Orcala', Categoria: 'Brainrot God' },
+            { id: 20, nombre: 'Gattio Tacoto', Categoria: 'Brainrot God' },
+            { id: 21, nombre: 'Tirgroline Frutonni', Categoria: '' }, // Categoría vacía
+            { id: 22, nombre: 'Carloo', Categoria: 'Mythic' },
+            { id: 23, nombre: 'Avocadorilla', Categoria: 'Mythic' },
+            { id: 24, nombre: 'Zibra Zubra Zibralini', Categoria: 'Mythic' },
+            { id: 25, nombre: 'Los Crocodillitos', Categoria: 'Brainrot God' },
+            { id: 28, nombre: 'Tigreligre Frutonni', Categoria: 'Brainrot God' },
+            { id: 29, nombre: 'Los Orcalitos', Categoria: 'Brainrot God' },
+            { id: 30, nombre: 'Cacasito Satalito', Categoria: 'Brainrot God' },
+            { id: 31, nombre: 'La Vacca Saturno Saturnita', Categoria: 'Secret' },
+            { id: 32, nombre: 'Bombardini Tortinii', Categoria: 'Brainrot God' },
+            { id: 33, nombre: 'Chihuanini Taconini', Categoria: 'Brainrot God' },
+            { id: 34, nombre: 'Tipi Topi Taco', Categoria: 'Brainrot God' },
+            { id: 35, nombre: 'Ballerino Lololo', Categoria: 'Brainrot God' },
+            { id: 36, nombre: 'Karkerkur Kurkur', Categoria: 'Secret' },
+            { id: 37, nombre: 'Cocofanto Elefanto', Categoria: 'Brainrot God' },
+            { id: 38, nombre: 'Espresso Signora', Categoria: 'Brainrot God' },
+            { id: 39, nombre: 'Trippi Troppi Troppa Trippa', Categoria: 'Brainrot God' },
+            { id: 40, nombre: 'Dul Dul Dul', Categoria: 'Secret' },
+            { id: 41, nombre: 'Frigo Camelo', Categoria: 'Mythic' },
+            { id: 42, nombre: 'La Karkekar Combinasion', Categoria: 'Secret' },
+            { id: 43, nombre: 'Graipuss Medussi', Categoria: 'Secret' },
+            { id: 44, nombre: 'Bisonte Giuppitere', Categoria: 'Secret' },
+            { id: 45, nombre: 'Crabbo Limonetta', Categoria: 'Brainrot God' },
+            { id: 46, nombre: 'Piccione Macchina', Categoria: 'Brainrot God' },
+            { id: 47, nombre: 'Spionero Golubiro', Categoria: 'Mythic' },
+            { id: 48, nombre: 'Los Tungtungtungcitos', Categoria: 'Brainrot God' },
+            { id: 49, nombre: 'Job Job Job Sahur', Categoria: 'Secret' },
+            { id: 50, nombre: 'Tartaruga Cisterna', Categoria: 'Brainrot God' },
+            { id: 51, nombre: 'Tracoducotulu Delapeladustuz', Categoria: 'Mythic' },
+            { id: 52, nombre: 'Te Te Te Sahur', Categoria: 'Mythic' },
+            { id: 53, nombre: 'Las Tralaleritas', Categoria: 'Secret' },
+            { id: 54, nombre: 'Las Capuchinas', Categoria: 'Brainrot God' },
+            { id: 55, nombre: 'Chachechi', Categoria: 'Secret' },
+            { id: 56, nombre: 'Torrtugini Dragonfrutini', Categoria: 'Secret' },
+            { id: 57, nombre: 'Tralalita Tralala', Categoria: 'Brainrot God' },
+            { id: 58, nombre: 'Blackhole Goat', Categoria: 'Secret' },
+            { id: 59, nombre: 'Belula Beluga', Categoria: 'Brainrot God' },
+            { id: 60, nombre: 'Extinct Matteo', Categoria: 'Secret' },
+            { id: 61, nombre: 'Capi Taco', Categoria: 'Brainrot God' },
+            { id: 62, nombre: 'Los Tipi Tacos', Categoria: 'Brainrot God' },
+            { id: 63, nombre: 'Tractoro Dinosauro', Categoria: 'Brainrot God' },
+            { id: 64, nombre: 'Chef Crabracadabra', Categoria: 'Legendary' },
+            { id: 65, nombre: 'Bombombini Gusini', Categoria: 'Mythic' },
+            { id: 66, nombre: 'Guerriro Digitale', Categoria: 'Secret' },
+            { id: 67, nombre: 'Orcalita Orcala', Categoria: 'Brainrot God' },
+            { id: 68, nombre: 'Las Vaquitas Saturnitas', Categoria: 'Secret' },
+            { id: 69, nombre: 'La Cucaracha', Categoria: 'Secret' },
+            { id: 70, nombre: 'Esok Sekolah', Categoria: 'Secret' },
+            { id: 71, nombre: 'La Sahur Combinasion', Categoria: 'Secret' },
+            { id: 72, nombre: 'Los Tralaleritos', Categoria: 'Secret' },
+            { id: 73, nombre: 'Corn Corn Corn Sahur', Categoria: 'Brainrot God' },
+            { id: 74, nombre: 'Boneca Ambalabu', Categoria: 'Rare' },
+            { id: 75, nombre: 'Noobini Pizzanini', Categoria: 'Common' },
+            { id: 76, nombre: 'To to to Sahur', Categoria: 'Secret' },
+            { id: 77, nombre: 'Trenostruzzo Turbo 4000', Categoria: 'Secret' },
+            { id: 78, nombre: 'Perrito Burrito', Categoria: 'Secret' },
+            { id: 79, nombre: 'Brasilini Berimbini', Categoria: 'Brainrot God' },
+            { id: 80, nombre: 'Carrotini Brainini', Categoria: 'Brainrot God' },
+            { id: 81, nombre: 'Tartaragno', Categoria: 'Common' },
+            { id: 82, nombre: 'Chimpanzini Bananini', Categoria: 'Legendary' },
+            { id: 83, nombre: 'Glorbo Fruttodrillo', Categoria: 'Legendary' },
+            { id: 84, nombre: 'Cavallo Virtuoso', Categoria: 'Mythic' },
+            { id: 85, nombre: 'Krupuk Pagi Pagi', Categoria: 'Brainrot God' },
+            { id: 86, nombre: 'Bananita Dolphinita', Categoria: 'Epic' },
+            { id: 87, nombre: 'Lionel Cactusell', Categoria: 'Legendary' },
+            { id: 88, nombre: 'Los Karkeritos', Categoria: 'Secret' },
+            { id: 89, nombre: 'Jacko Jack Jack', Categoria: 'Brainrot God' },
+            { id: 90, nombre: 'Salamino Penguino', Categoria: 'Epic' },
+            { id: 91, nombre: 'Los Nooo My Hotspotsitos', Categoria: 'Secret' },
+            { id: 92, nombre: 'Cacto Hipopotamo', Categoria: 'Rare' },
+            { id: 93, nombre: 'Brr Brr Patapim', Categoria: 'Epic' },
+            { id: 94, nombre: 'Pandaccini Bananini', Categoria: 'Legendary' },
+            { id: 95, nombre: 'Avocadini Guffo', Categoria: 'Epic' },
+            { id: 96, nombre: 'Brri Brri Bicus Dicus Bombicus', Categoria: 'Epic' },
+            { id: 97, nombre: 'Los Tortus', Categoria: 'Secret' },
+            { id: 98, nombre: 'Los 67', Categoria: 'Secret' },
+            { id: 99, nombre: 'Urubini Flamenguini', Categoria: 'Brainrot God' },
+            { id: 100, nombre: 'Los Chicleteiras', Categoria: 'Secret' },
+            { id: 101, nombre: 'Pot Hotspot', Categoria: 'Secret' },
+            { id: 102, nombre: 'Orangutini Ananassini', Categoria: 'Mythic' },
+            { id: 103, nombre: 'Bulbito Bandito Traktorito', Categoria: 'Brainrot God' },
+            { id: 104, nombre: 'Svinina Bombardino', Categoria: 'Common' },
+            { id: 105, nombre: 'Pipi Kiwi', Categoria: 'Common' },
+            { id: 106, nombre: 'Bandito Bobrito', Categoria: 'Rare' },
+            { id: 107, nombre: 'Fluriflura', Categoria: 'Common' },
+            { id: 108, nombre: 'Cachorrito Melonito', Categoria: 'Mythic' },
+            { id: 109, nombre: 'Lirili Larila', Categoria: 'Common' },
+            { id: 110, nombre: 'Talpa Di Fero', Categoria: 'Common' },
+            { id: 111, nombre: 'Rhino Toasterino', Categoria: 'Mythic' },
+            { id: 112, nombre: 'Sigma Boy', Categoria: 'Legendary' },
+            { id: 113, nombre: 'Gangster Footera', Categoria: 'Rare' },
+            { id: 114, nombre: 'Trulimero Trulicina', Categoria: 'Epic' },
+            { id: 115, nombre: 'Gorillo Watermelondrillo', Categoria: 'Mythic' },
+            { id: 116, nombre: 'Trippi Troppi', Categoria: 'Rare' },
+            { id: 117, nombre: 'Buho de Fuego', Categoria: 'Legendary' },
+            { id: 118, nombre: 'Vampira Cappucina', Categoria: 'Brainrot God' },
+            { id: 119, nombre: 'Cappuccino Assassino', Categoria: 'Rare' },
+            { id: 120, nombre: 'Pinealotto Fruttarino', Categoria: 'Rare' },
+            { id: 121, nombre: 'Lerulerulerule', Categoria: 'Mythic' },
+            { id: 122, nombre: 'Avocadini Antilopini', Categoria: 'Epic' },
+            { id: 123, nombre: 'Mummio Rappitto', Categoria: 'Epic' },
+            { id: 124, nombre: 'Bambini Crostini', Categoria: 'Epic' },
+            { id: 125, nombre: 'Blueberrinni Octopusini', Categoria: 'Legendary' },
+            { id: 126, nombre: 'Toiletto Focaccino', Categoria: 'Mythic' },
+            { id: 127, nombre: 'Vulturino Skeletono', Categoria: 'Secret' },
+            { id: 128, nombre: 'Magi Ribbitini', Categoria: 'Mythic' },
+            { id: 129, nombre: 'Strawberrelli Flamingelli', Categoria: 'Legendary' }
+        ];
+
+        // --- LÓGICA DE LA APLICACIÓN ---
+
+        // Para búsquedas rápidas, creamos "Mapas" (como diccionarios)
+        const userMap = new Map(db_usuarios.map(u => [u.id, u]));
+        const brainrotMap = new Map(db_brainrots.map(b => [b.id, b]));
+
+        // Referencias a los elementos del HTML
+        const userButtonsContainer = document.getElementById('user-buttons');
+        const userListContainer = document.getElementById('user-list-container');
+        const duplicatesContent = document.getElementById('duplicates-content');
+
+        /**
+         * Muestra la lista de brainrots para un usuario específico
+         */
+        function displayUserList(userId) {
+            // Limpiar el contenedor
+            userListContainer.innerHTML = '';
+
+            // Marcar el botón activo
+            document.querySelectorAll('#user-buttons button').forEach(btn => {
+                btn.classList.remove('active');
+                if (parseInt(btn.dataset.userid) === userId) {
+                    btn.classList.add('active');
+                }
+            });
+
+            const user = userMap.get(userId);
+            if (!user) return;
+
+            // Obtener los IDs de brainrots de este usuario
+            const userBrainrotIds = db_brainrots_usuario
+                .filter(item => item.userId === userId)
+                .map(item => item.brId);
+            
+            // Obtener los detalles de esos brainrots
+            const userBrainrots = userBrainrotIds
+                .map(brId => brainrotMap.get(brId))
+                .filter(br => br); // Filtrar por si alguno no se encontró
+
+            // Ordenar alfabéticamente
+            userBrainrots.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+            // Crear el HTML
+            const h3 = document.createElement('h3');
+            h3.textContent = `Lista de: ${user.dueño}`;
+            userListContainer.appendChild(h3);
+
+            if (userBrainrots.length === 0) {
+                const p = document.createElement('p');
+                p.className = 'no-results';
+                p.textContent = 'Este usuario no tiene brainrots disponibles.';
+                userListContainer.appendChild(p);
+                return;
+            }
+
+            const ul = document.createElement('ul');
+            userBrainrots.forEach(br => {
+                const li = document.createElement('li');
+                
+                const strong = document.createElement('strong');
+                strong.textContent = br.nombre;
+                
+                const span = document.createElement('span');
+                span.className = 'category';
+                // Si la categoría está vacía, mostrar "Sin Categoría"
+                span.textContent = `(${(br.Categoria && br.Categoria.trim() !== '') ? br.Categoria : 'Sin Categoría'})`;
+                
+                li.appendChild(strong);
+                li.appendChild(span);
+                ul.appendChild(li);
+            });
+            userListContainer.appendChild(ul);
+        }
+
+        /**
+         * Genera y muestra la tabla de duplicados
+         */
+        function displayDuplicates() {
+            // Limpiar contenido
+            duplicatesContent.innerHTML = '';
+
+            // 1. Contar cuántos usuarios tienen cada brainrot
+            const brainrotOwnership = new Map();
+            for (const item of db_brainrots_usuario) {
+                const brId = item.brId;
+                const userId = item.userId;
+
+                if (!brainrotOwnership.has(brId)) {
+                    brainrotOwnership.set(brId, new Set());
+                }
+                brainrotOwnership.get(brId).add(userId);
+            }
+
+            // 2. Filtrar los que tienen más de 1 dueño
+            const duplicates = [];
+            for (const [brId, userSet] of brainrotOwnership.entries()) {
+                if (userSet.size > 1) {
+                    const brainrot = brainrotMap.get(brId);
+                    const userNames = [...userSet]
+                        .map(uid => userMap.get(uid).dueño)
+                        .sort()
+                        .join(', ');
+                    
+                    duplicates.push({
+                        nombre: brainrot.nombre,
+                        categoria: (brainrot.Categoria && brainrot.Categoria.trim() !== '') ? brainrot.Categoria : 'Sin Categoría',
+                        usuarios: userNames
+                    });
+                }
+            }
+
+            // 3. Mostrar los resultados
+            if (duplicates.length === 0) {
+                const p = document.createElement('p');
+                p.className = 'no-results';
+                p.textContent = 'No se encontraron duplicados entre estos 5 usuarios.';
+                duplicatesContent.appendChild(p);
+                return;
+            }
+
+            // Ordenar alfabéticamente
+            duplicates.sort((a, b) => a.nombre.localeCompare(b.nombre));
+
+            // Crear la tabla
+            const table = document.createElement('table');
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Brainrot (Nombre)</th>
+                        <th>Categoría</th>
+                        <th>Usuarios que lo tienen</th>
+                    </tr>
+                </thead>
+            `;
+            
+            const tbody = document.createElement('tbody');
+            duplicates.forEach(dup => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${dup.nombre}</td>
+                    <td>${dup.categoria}</td>
+                    <td>${dup.usuarios}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            table.appendChild(tbody);
+            duplicatesContent.appendChild(table);
+        }
+
+        /**
+         * Función que se ejecuta cuando la página carga
+         */
+        function initialize() {
+            // 1. Crear los botones de usuario
+            db_usuarios.forEach(user => {
+                const button = document.createElement('button');
+                button.textContent = user.dueño;
+                button.dataset.userid = user.id; // Guardar el ID en el botón
+                button.addEventListener('click', () => displayUserList(user.id));
+                userButtonsContainer.appendChild(button);
+            });
+
+            // 2. Generar el reporte de duplicados automáticamente
+            displayDuplicates();
+        }
+
+        // Ejecutar la inicialización cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', initialize);
+
+    </script>
+</body>
+</html>
