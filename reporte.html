@@ -29,6 +29,33 @@
         h2 { font-size: 1.5em; margin-top: 30px; }
         h3 { font-size: 1.2em; color: #34495e; border-bottom: none; margin-top: 20px; }
 
+        /* --- (NUEVO) Estilos de Estadísticas --- */
+        #summary-stats {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border: 1px solid #dfe6e9;
+        }
+        #summary-stats p {
+            margin: 5px 15px;
+            font-size: 1em;
+            color: #34495e;
+            font-weight: 500;
+            text-align: center;
+        }
+        #summary-stats strong {
+            font-size: 1.4em;
+            color: #2c3e50;
+            display: block; /* Para que el número quede debajo */
+            margin-top: 4px;
+        }
+        /* --- Fin Estilos Estadísticas --- */
+
+
         /* --- Estilos del Buscador --- */
         .search-container {
             position: relative; /* Clave para posicionar las sugerencias */
@@ -102,7 +129,7 @@
             background-color: #2980b9;
         }
         #user-buttons button.active {
-            background-color: #e74c3c;
+            background-color: #e74c3c; /* Botón activo en rojo */
         }
         
         #user-list-container ul {
@@ -153,6 +180,9 @@
     <div class="container">
         <h1>Reporte de Brainrots (Offline V2)</h1>
 
+        <div id="summary-stats">
+            </div>
+
         <h2>Buscar Brainrot (Quién lo tiene)</h2>
         <div class="search-container">
             <input type="text" id="brainrot-search" placeholder="Escribe el nombre de un brainrot..." autocomplete="off">
@@ -161,6 +191,7 @@
         </div>
         <div id="search-results">
             </div>
+
         <h2>Selecciona un usuario para ver su lista</h2>
         <div id="user-buttons">
             </div>
@@ -168,7 +199,7 @@
             </div>
         
         <div id="duplicates-container">
-            <h2>Brainrots Duplicados (entre estos 5 usuarios)</h2>
+            <h2 id="msg"></h2>
             <div id="duplicates-content">
                 </div>
         </div>
@@ -185,7 +216,10 @@ const db_usuarios = [
     { id: 24, dueño: 'juanvrn33' },
     { id: 25, dueño: 'juanvrn34' },
     { id: 26, dueño: 'juanvrn35' },
+    { id: 27, dueño: 'juanvrn36' },
 ];
+
+document.getElementById("msg").append("Brainrots Duplicados (entre estos "+ db_usuarios.length +" usuarios)");
 
 const db_brainrots_usuario = [
     { userId: 25, brId: 24 },
@@ -293,7 +327,6 @@ const db_brainrots_usuario = [
     { userId: 25, brId: 30 },
     { userId: 25, brId: 129 },
     { userId: 25, brId: 74 },
-    { userId: 26, brId: 11 },
     { userId: 26, brId: 130 },
     { userId: 26, brId: 57 },
     { userId: 26, brId: 131 },
@@ -313,6 +346,20 @@ const db_brainrots_usuario = [
     { userId: 26, brId: 136 },
     { userId: 26, brId: 137 },
     { userId: 26, brId: 70 },
+    { userId: 26, brId: 35 },
+    { userId: 26, brId: 80 },
+    { userId: 27, brId: 147 },
+    { userId: 27, brId: 148 },
+    { userId: 27, brId: 28 },
+    { userId: 27, brId: 149 },
+    { userId: 27, brId: 150 },
+    { userId: 27, brId: 22 },
+    { userId: 27, brId: 151 },
+    { userId: 27, brId: 152 },
+    { userId: 27, brId: 79 },
+    { userId: 27, brId: 142 },
+    { userId: 27, brId: 61 },
+    { userId: 27, brId: 144 },
 ];
 
 const db_brainrots = [
@@ -332,14 +379,17 @@ const db_brainrots = [
     { id: 17, nombre: 'Matteo', Categoria: 'Brainrot God' },
     { id: 19, nombre: 'Orcalero Orcala', Categoria: 'Brainrot God' },
     { id: 20, nombre: 'Gattio Tacoto', Categoria: 'Brainrot God' },
+    { id: 22, nombre: 'Carloo', Categoria: 'Mythic' },
     { id: 24, nombre: 'Zibra Zubra Zibralini', Categoria: 'Mythic' },
     { id: 25, nombre: 'Los Crocodillitos', Categoria: 'Brainrot God' },
+    { id: 28, nombre: 'Tigreligre Frutonni', Categoria: 'Brainrot God' },
     { id: 29, nombre: 'Los Orcalitos', Categoria: 'Brainrot God' },
     { id: 30, nombre: 'Cacasito Satalito', Categoria: 'Brainrot God' },
     { id: 31, nombre: 'La Vacca Saturno Saturnita', Categoria: 'Secret' },
     { id: 32, nombre: 'Bombardini Tortinii', Categoria: 'Brainrot God' },
     { id: 33, nombre: 'Chihuanini Taconini', Categoria: 'Brainrot God' },
     { id: 34, nombre: 'Tipi Topi Taco', Categoria: 'Brainrot God' },
+    { id: 35, nombre: 'Ballerino Lololo', Categoria: 'Brainrot God' },
     { id: 36, nombre: 'Karkerkur Kurkur', Categoria: 'Secret' },
     { id: 37, nombre: 'Cocofanto Elefanto', Categoria: 'Brainrot God' },
     { id: 39, nombre: 'Trippi Troppi Troppa Trippa', Categoria: 'Brainrot God' },
@@ -361,6 +411,7 @@ const db_brainrots = [
     { id: 57, nombre: 'Tralalita Tralala', Categoria: 'Brainrot God' },
     { id: 58, nombre: 'Blackhole Goat', Categoria: 'Secret' },
     { id: 59, nombre: 'Belula Beluga', Categoria: 'Brainrot God' },
+    { id: 61, nombre: 'Capi Taco', Categoria: 'Brainrot God' },
     { id: 62, nombre: 'Los Tipi Tacos', Categoria: 'Brainrot God' },
     { id: 63, nombre: 'Tractoro Dinosauro', Categoria: 'Brainrot God' },
     { id: 64, nombre: 'Chef Crabracadabra', Categoria: 'Legendary' },
@@ -374,6 +425,8 @@ const db_brainrots = [
     { id: 74, nombre: 'Boneca Ambalabu', Categoria: 'Rare' },
     { id: 75, nombre: 'Noobini Pizzanini', Categoria: 'Common' },
     { id: 78, nombre: 'Perrito Burrito', Categoria: 'Secret' },
+    { id: 79, nombre: 'Brasilini Berimbini', Categoria: 'Brainrot God' },
+    { id: 80, nombre: 'Carrotini Brainini', Categoria: 'Brainrot God' },
     { id: 81, nombre: 'Tartaragno', Categoria: 'Common' },
     { id: 82, nombre: 'Chimpanzini Bananini', Categoria: 'Legendary' },
     { id: 83, nombre: 'Glorbo Fruttodrillo', Categoria: 'Legendary' },
@@ -435,7 +488,16 @@ const db_brainrots = [
     { id: 139, nombre: 'Bambu Bambu Sahur', Categoria: 'Brainrot God' },
     { id: 140, nombre: 'Tim Cheese', Categoria: 'Common' },
     { id: 141, nombre: 'Pakrahmatmatina', Categoria: 'Brainrot God' },
+    { id: 142, nombre: '67', Categoria: 'Secret' },
+    { id: 144, nombre: 'Tentacolo Tecnico', Categoria: 'Brainrot God' },
+    { id: 147, nombre: 'Quesadilla Vampiro', Categoria: 'Secret' },
+    { id: 148, nombre: 'Los Mobilis', Categoria: 'Secret' },
+    { id: 149, nombre: 'La Grande Combinasion', Categoria: 'Secret' },
+    { id: 150, nombre: 'Chipso and Queso', Categoria: 'Secret' },
+    { id: 151, nombre: 'Jackorilla', Categoria: 'Secret' },
+    { id: 152, nombre: 'Jacko Spaventosa', Categoria: 'Mythic' },
 ];
+
 
 
 
@@ -455,7 +517,7 @@ const db_brainrots = [
         const searchResultsContainer = document.getElementById('search-results');
 
         
-        // --- Lógica del Buscador (NUEVO) ---
+        // --- Lógica del Buscador (EXISTENTE) ---
 
         /**
          * Se activa cada vez que el usuario escribe en el input de búsqueda
@@ -517,7 +579,7 @@ const db_brainrots = [
 
             // 4. Mostrar los resultados
             if (uniqueOwnerIds.length === 0) {
-                searchResultsContainer.innerHTML = `<p class="no-results">Ninguno de los 5 usuarios tiene <strong>${brainrotName}</strong>.</p>`;
+                searchResultsContainer.innerHTML = `<p class="no-results">Ninguno de los ${db_usuarios.length} usuarios tiene <strong>${brainrotName}</strong>.</p>`;
             } else {
                 // Mapear IDs a nombres
                 const ownerNames = uniqueOwnerIds.map(id => userMap.get(id).dueño);
@@ -531,21 +593,41 @@ const db_brainrots = [
             }
         }
 
-        // --- Lógica de Listas y Duplicados (EXISTENTE) ---
+        /**
+         * (NUEVO) Limpia el buscador al hacer focus
+         */
+        function handleSearchFocus() {
+            searchInput.value = ''; // Limpiar el input
+            suggestionsBox.innerHTML = ''; // Limpiar sugerencias
+        }
+
+        // --- Lógica de Listas y Duplicados ---
 
         /**
-         * Muestra la lista de brainrots para un usuario específico
+         * (MODIFICADA) Muestra/Oculta la lista de brainrots para un usuario
          */
         function displayUserList(userId) {
-            userListContainer.innerHTML = ''; // Limpiar
+            const clickedButton = document.querySelector(`button[data-userid="${userId}"]`);
+            if (!clickedButton) return;
 
-            // Marcar el botón activo
+            // 1. Comprobar si ya estaba activo
+            const isAlreadyActive = clickedButton.classList.contains('active');
+
+            // 2. Limpiar la lista siempre
+            userListContainer.innerHTML = '';
+
+            // 3. Desactivar todos los botones
             document.querySelectorAll('#user-buttons button').forEach(btn => {
                 btn.classList.remove('active');
-                if (parseInt(btn.dataset.userid) === userId) {
-                    btn.classList.add('active');
-                }
             });
+
+            // 4. Si ya estaba activo, nos detenemos (efecto toggle-off)
+            if (isAlreadyActive) {
+                return;
+            }
+
+            // 5. Si no estaba activo, lo activamos y mostramos la lista
+            clickedButton.classList.add('active');
 
             const user = userMap.get(userId);
             if (!user) return;
@@ -579,7 +661,7 @@ const db_brainrots = [
         }
 
         /**
-         * Genera y muestra la tabla de duplicados
+         * Genera y muestra la tabla de duplicados (Sin cambios)
          */
         function displayDuplicates() {
             duplicatesContent.innerHTML = '';
@@ -612,7 +694,7 @@ const db_brainrots = [
             }
 
             if (duplicates.length === 0) {
-                duplicatesContent.innerHTML = `<p class="no-results">No se encontraron duplicados entre estos 5 usuarios.</p>`;
+                duplicatesContent.innerHTML = `<p class="no-results">No se encontraron duplicados entre estos ${db_usuarios.length} usuarios.</p>`;
                 return;
             }
 
@@ -631,13 +713,41 @@ const db_brainrots = [
         }
 
         /**
-         * Función que se ejecuta cuando la página carga
+         * (MODIFICADA) Función que se ejecuta cuando la página carga
          */
         function initialize() {
+
+            // --- INICIO: NUEVO CÓDIGO DE ESTADÍSTICAS ---
+            const summaryContainer = document.getElementById('summary-stats');
+
+            // 1. Total de entradas (con duplicados)
+            const totalConDuplicados = db_brainrots_usuario.length;
+            
+            // 2. Total de brainrots únicos en posesión
+            const allOwnedBrainrotIds = db_brainrots_usuario.map(item => item.brId);
+            const uniqueOwnedBrainrotIds = new Set(allOwnedBrainrotIds);
+            const totalSinDuplicados = uniqueOwnedBrainrotIds.size;
+
+            // 3. Total de brainrots definidos en la 'base de datos'
+            const totalDefinidos = db_brainrots.length;
+
+            summaryContainer.innerHTML = `
+                <p>Total (con duplicados): <strong>${totalConDuplicados}</strong></p>
+                <p>Únicos en posesión: <strong>${totalSinDuplicados}</strong></p>
+                <p>Total Definidos: <strong>${totalDefinidos}</strong></p>
+            `;
+            // --- FIN: NUEVO CÓDIGO DE ESTADÍSTICAS ---
+
+
             // 1. Crear los botones de usuario
             db_usuarios.forEach(user => {
                 const button = document.createElement('button');
-                button.textContent = user.dueño;
+                
+                // --- MODIFICADO: Añadir contador al botón ---
+                const userBrainrotCount = db_brainrots_usuario.filter(item => item.userId === user.id).length;
+                button.textContent = `${user.dueño} (${userBrainrotCount})`;
+                // --- FIN MODIFICACIÓN ---
+
                 button.dataset.userid = user.id;
                 button.addEventListener('click', () => displayUserList(user.id));
                 userButtonsContainer.appendChild(button);
@@ -646,10 +756,11 @@ const db_brainrots = [
             // 2. Generar el reporte de duplicados
             displayDuplicates();
 
-            // 3. (NUEVO) Añadir listeners al buscador
+            // 3. Añadir listeners al buscador
             searchInput.addEventListener('input', handleSearchInput);
+            searchInput.addEventListener('focus', handleSearchFocus); // <-- AÑADIR ESTA LÍNEA
 
-            // 4. (NUEVO) Cerrar sugerencias si se hace clic fuera
+            // 4. Cerrar sugerencias si se hace clic fuera
             document.addEventListener('click', (e) => {
                 // Si el clic NO fue en el contenedor del buscador
                 if (!e.target.closest('.search-container')) {
